@@ -15,9 +15,20 @@ export class MenuComponent implements OnInit {
         label: 'Pipes de Angular',
         icon: 'pi pi-sparkles',
         items: [
-          { label: 'Textos y Fechas', icon: 'pi pi-align-left' },
-          { label: 'Números', icon: 'pi pi-sort-numeric-up' },
-          { label: 'No comúnes', icon: 'pi pi-flag' },
+          {
+            label: 'Textos y Fechas',
+            icon: 'pi pi-align-left',
+            routerLink: '/',
+          },
+          {
+            label: 'Números',
+            icon: 'pi pi-sort-numeric-up',
+            routerLink: 'numbers',
+          },
+          { label: 'No comúnes',
+            icon: 'pi pi-flag',
+            routerLink: 'uncommon'
+          },
         ],
       },
       {
