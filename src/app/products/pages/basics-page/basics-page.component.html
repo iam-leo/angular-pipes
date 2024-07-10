@@ -1,1 +1,32 @@
-<p>basics-page works!</p>
+<p-panel header="Pipes Básicos" class="p-2">
+    <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
+</p-panel>
+
+<div class="flex gap-4 mt-3">
+    <div class="w-full">
+        <p-card header="Uppercase">
+            <p>
+                <span class="font-semibold">{{ setTemplateExpression(textLower, 'uppercase') }}</span> lo transforma en: <span class="font-semibold">{{ textLower | uppercase }}</span>
+            </p>
+        </p-card>
+    </div>
+
+    <div class="w-full">
+        <p-card header="Lowercase">
+            <p>
+                <span class="font-semibold">{{ setTemplateExpression(textUpper, 'lowercase') }}</span> lo transforma en: <span
+                    class="font-semibold">{{ textUpper | lowercase }}</span>
+            </p>
+        </p-card>
+    </div>
+
+    <div class="w-full">
+        <p-card header="Titlecase">
+            <p>
+                <span class="font-semibold">{{ setTemplateExpression(textLower, 'titlecase') }}</span> lo transforma en: <span
+                    class="font-semibold">{{ textLower | titlecase }}</span>
+            </p>
+        </p-card>
+    </div>
+
+</div>
