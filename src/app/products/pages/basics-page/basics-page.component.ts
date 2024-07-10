@@ -6,10 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './basics-page.component.css',
 })
 export class BasicsPageComponent {
-  public textLower: string = 'prueba';
-  public textUpper: string = 'PRUEBA';
-  public textRare: string = 'PrUeBa';
-  templateExpression: string = '';
+  public textLower: string = 'tu string';
+  public textUpper: string = 'TU STRING';
+  public textRare: string = 'Tu StRiNg';
+  public templateExpression: string = '';
+  public customDate: Date = new Date();
+  public dataTable: any[] = [];
 
   setTemplateExpression(textType: string, pipeType: string) {
     return `{{ ${textType} | ${pipeType} }}`;

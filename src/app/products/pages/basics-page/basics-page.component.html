@@ -2,7 +2,7 @@
     <p>Pipes incluídos en Angular - Usualmente en el Common Module</p>
 </p-panel>
 
-<div class="flex gap-4 mt-3">
+<div class="grid w-full grid-cols-1 gap-4 mt-3 md:grid-cols-2 lg:grid-cols-3">
     <div class="w-full">
         <p-card header="Uppercase">
             <p>
@@ -29,4 +29,44 @@
         </p-card>
     </div>
 
+    <div class="w-full col-span-full">
+        <p-card header="Date">
+            <ul class="flex flex-col gap-y-3">
+                <li>
+                    <span class="font-semibold">{{ setTemplateExpression( customDate.toString(), 'date') }}</span> lo transforma en:
+                    <span class="font-semibold">{{ customDate | date }}</span>
+                </li>
+
+                <li>
+                    <span class="font-semibold">{{ setTemplateExpression( customDate.toString(), "date: 'short'") }}</span> lo transforma en:
+                    <span class="font-semibold">{{ customDate | date: 'short' }}</span>
+                </li>
+
+                <li>
+                    <span class="font-semibold">{{ setTemplateExpression( customDate.toString(), "date: 'long'") }}</span> lo transforma en:
+                    <span class="font-semibold">{{ customDate | date: 'long' }}</span>
+                </li>
+
+                <li>
+                    <span class="font-semibold">{{ setTemplateExpression( customDate.toString(), "date: 'MMMM'") }}</span> lo transforma en:
+                    <span class="font-semibold">{{ customDate | date: 'MMMM' }}</span>
+                </li>
+
+                <li>
+                    <span class="font-semibold">{{ setTemplateExpression( customDate.toString(), "date: 'MMMM dd, yyyy'") }}</span> lo transforma en:
+                    <span class="font-semibold">{{ customDate | date: 'MMMM dd, yy' }}</span>
+                </li>
+            </ul>
+
+            <hr class="my-5">
+
+            <ul>
+                <li>
+                    <span class="font-semibold">{{ setTemplateExpression( customDate.toString(), "date: 'long' : 'GMT-6'") }}</span> lo
+                    transforma en:
+                    <span class="font-semibold">{{ customDate | date: 'long' : 'GMT-6' }}</span>
+                </li>
+            </ul>
+        </p-card>
+    </div>
 </div>
