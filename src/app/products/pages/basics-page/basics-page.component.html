@@ -66,6 +66,18 @@
                     transforma en:
                     <span class="font-semibold">{{ customDate | date: 'long' : 'GMT-6' }}</span>
                 </li>
+
+                <li>
+                    <span class="font-semibold">{{ setTemplateExpression( customDate.toString(), "date: ' ' : ' ' : 'es-AR'") }}</span> lo
+                    transforma en:
+                    <span class="font-semibold">{{ customDate | date: 'long' : '' : 'es-AR' }}</span>
+                </li>
+
+                <li>
+                    <span class="font-semibold">{{ setTemplateExpression( customDate.toString(), "date: ' ' : ' ' : 'ja'") }}</span> lo
+                    transforma en:
+                    <span class="font-semibold">{{ customDate | date: 'long' : '' : 'ja' }}</span>
+                </li>
             </ul>
         </p-card>
     </div>
