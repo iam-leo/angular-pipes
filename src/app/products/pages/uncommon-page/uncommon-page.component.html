@@ -29,7 +29,20 @@
 
     <div class="w-full">
         <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <b>Original</b>
+            <p> {{ clients }} </p>
 
+            <b class="block mt-3">Slice:2:4</b>
+            <p> {{ clients | slice:2:4 }} </p>
+
+            <b class="block mt-3">Slice:0:3</b>
+            <p> {{ clients | slice:0:3 }} </p>
+
+            <b class="block mt-3">Slice:0:-1</b>
+            <p> {{ clients | slice:0:-1 }} </p>
+
+            <b class="block mt-3">Slice:0:-3</b>
+            <p> {{ clients | slice:0:-3 }} </p>
         </p-fieldset>
     </div>
 
