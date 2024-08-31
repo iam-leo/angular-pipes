@@ -64,7 +64,11 @@
 
     <div class="w-full">
         <p-fieldset legend="Async Pipe" [toggleable]="true">
-    
+            <p *ngIf="!(myObservableTimer | async)">Resolviendo Observable...</p>
+            <pre>{{ myObservableTimer | async }}</pre>
+
+            <p *ngIf="!(myPromise | async)">Resolviendo Promesa...</p>
+            <pre>{{ myPromise | async }}</pre>
         </p-fieldset>
     </div>
 </div>
